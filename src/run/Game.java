@@ -1,13 +1,12 @@
 package run;
-
 import java.util.Scanner;
 
 public class Game {
+    public static final int FULL_HEALTH = 100;
 
     private Player player1;
     private Player player2;
     public void StartStreetFighter(){
-
         do{
             buildPlayer1();buildPlayer2();
             startGame();
@@ -39,12 +38,12 @@ public class Game {
     private void buildPlayer1(){
         String nickname = askNickname();
         int age = askAge();
-        player1 = new Player("Ryu", 100, "Muat Thai", nickname, age);
+        player1 = new Player("Ryu", "Muat Thai", nickname, age);
     }
     private void buildPlayer2(){
         String nickname = askNickname();
         int age = askAge();
-        player2 = new Player("Ken", 100, "Hadouken", nickname, age);
+        player2 = new Player("Ken", "Hadouken", nickname, age);
     }
 
     private String askNickname(){
